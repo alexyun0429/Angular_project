@@ -4,7 +4,9 @@
     <p class="card-text">Premium: {{ premium }}</p>
     <p class="card-text">
       Status:
-      <span class="status-badge" [style.backgroundColor]="statusColor">{{ status }}</span>
+      <span class="status-badge" [style.backgroundColor]="statusColor">{{
+        status
+      }}</span>
     </p>
     <div class="button-row">
       <button class="btn btn-primary" (click)="onView()">View</button>

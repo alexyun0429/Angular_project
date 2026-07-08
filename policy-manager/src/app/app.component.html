@@ -1,9 +1,13 @@
-@for (p of policies; track p.number) {
-  <app-policy-card
-    [policyNumber]="p.number"
-    [premium]="p.premium"
-    [status]="p.status"
-    (view)="onViewPolicy($event)"
-    (renew)="onRenewPolicy($event)"
-  />
+@if (policies$ | async; as policies) {
+  @for (p of policies; track p.number) {
+    <app-policy-card
+      [policyNumber]="p.number"
+      [premium]="p.premium"
+      [status]="p.status"
+      (view)="onViewPolicy($event)"
+      (renew)="onRenewPolicy($event)"
+    ></app-policy-card>
+  }
+} @else {
+  <p>Loading policies...</p>
 }

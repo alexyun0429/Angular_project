@@ -4,7 +4,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-policy-card',
   standalone: true,
   templateUrl: './policy-card.component.html',
-  styleUrl: './policy-card.component.css'
+  styleUrl: './policy-card.component.css',
 })
 export class PolicyCardComponent {
   @Input() policyNumber = '';
