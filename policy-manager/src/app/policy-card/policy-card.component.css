@@ -1,0 +1,15 @@
+.status-badge {
+	display: inline-block;
+	margin-left: 0.5rem;
+	padding: 0.2rem 0.6rem;
+	border-radius: 999px;
+	color: #ffffff;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+.button-row {
+	display: flex;
+	gap: 0.5rem;
+}

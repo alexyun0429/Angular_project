@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Policy Number: {{ policyNumber }}</h5>
+    <p class="card-text">Premium: {{ premium }}</p>
+    <p class="card-text">
+      Status:
+      <span class="status-badge" [style.backgroundColor]="statusColor">{{ status }}</span>
+    </p>
+    <div class="button-row">
+      <button class="btn btn-primary" (click)="onView()">View</button>
+      <button class="btn btn-success" (click)="onRenew()">Renew</button>
+    </div>
+  </div>
+</div>
