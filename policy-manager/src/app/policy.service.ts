@@ -26,4 +26,14 @@ export class PolicyService {
       map((policies) => policies.find((policy) => policy.number === number)),
     );
   }
+
+  searchPolicies(term: string): Observable<Policy[]> {
+    return this.getPolicies().pipe(
+      map((policies) =>
+        policies.filter((policy) =>
+          policy.number.toLowerCase().includes(term.toLowerCase()),
+        ),
+      ),
+    );
+  }
 }

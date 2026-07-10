@@ -1,5 +1,6 @@
 @if (policies$ | async; as policies) {
-  @for (p of policies; track p.number) {
+  <input [formControl]="search" placeholder="Search policies" />
+  @for (p of result$ | async; track p.number) {
     <app-policy-card
       [policyNumber]="p.number"
       [premium]="p.premium"
